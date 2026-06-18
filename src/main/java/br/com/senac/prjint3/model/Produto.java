@@ -33,8 +33,7 @@ public class Produto {
     @Column(name = "produto_genero", nullable = false)
     private GeneroProduto genero;
 
-    // O nome da coluna original está com erro de digitação: prduto_faixaEtaria.
-    @Column(name = "prduto_faixaEtaria", nullable = false)
+    @Column(name = "produto_faixa_etaria", nullable = false)
     private Integer faixaEtaria;
 
     @Column(name = "produto_status", nullable = false)

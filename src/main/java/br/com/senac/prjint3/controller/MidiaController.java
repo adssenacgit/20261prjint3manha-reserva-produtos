@@ -9,12 +9,14 @@ import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/midias")
 @Tag(name = "Mídias", description = "CRUD de mídias com apagado lógico")
+@CrossOrigin("*")    
 public class MidiaController {
     private final MidiaService service;
 

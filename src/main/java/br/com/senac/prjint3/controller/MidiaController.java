@@ -34,6 +34,14 @@ public class MidiaController {
         return service.listarAtivos().stream().map(MidiaResponse::from).toList();
     }
 
+    @GetMapping("/produto/{produtoId}")
+    public List<MidiaResponse> listarPorProduto(@PathVariable Integer produtoId) {
+        return service.listarPorProduto(produtoId)
+                .stream()
+                .map(MidiaResponse::from)
+                .toList();
+    }
+
     @GetMapping("/{id}")
     public MidiaResponse buscar(@PathVariable Integer id) {
         return MidiaResponse.from(service.buscar(id));

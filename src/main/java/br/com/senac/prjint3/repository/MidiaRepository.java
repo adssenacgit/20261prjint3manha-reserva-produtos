@@ -9,4 +9,5 @@ public interface MidiaRepository extends JpaRepository<Midia, Integer> {
     List<Midia> findByStatusNot(Integer status);
     List<Midia> findByStatus(Integer status);
     Optional<Midia> findByIdAndStatusNot(Integer id, Integer status);
+    List<Midia> findByProduto_IdAndStatusNot(Integer produtoId, Integer status);
 }

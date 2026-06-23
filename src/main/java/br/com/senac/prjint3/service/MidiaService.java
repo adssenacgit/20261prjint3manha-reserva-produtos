@@ -31,10 +31,7 @@ public class MidiaService {
     }
 
     public List<Midia> listarPorProduto(Integer produtoId) {
-        produtoRepository.findByIdAndStatusNot(produtoId, StatusRegistro.APAGADO)
-                .orElseThrow(() -> new RecursoNaoEncontradoException("Produto não encontrado."));
-
-        return repository.findByProduto_IdAndStatusNot(produtoId, StatusRegistro.APAGADO);
+        return repository.findByProduto_IdAndStatusNot(produtoId, -1);
     }
 
     public Midia buscar(Integer id) {

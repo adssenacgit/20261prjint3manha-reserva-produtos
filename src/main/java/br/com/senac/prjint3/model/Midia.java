@@ -8,7 +8,7 @@ public class Midia {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "midia_id")
+    @Column(name = "midias_id")
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)

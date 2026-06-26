@@ -9,4 +9,5 @@ public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
     List<Cliente> findByStatusNot(Integer status);
     List<Cliente> findByStatus(Integer status);
     Optional<Cliente> findByIdAndStatusNot(Integer id, Integer status);
+    Optional<Cliente> findByEmailAndSenhaAndStatus(String email, String senha, Integer status);
 }
